@@ -11,6 +11,11 @@ describe("Bisiesto", () => {
     expect(resultado).toEqual(true);
   });
 
+  it("Toma en cuenta el año como NO bisiesto si es multiplo de 100 pero no de 400", () => {
+    const resultado = esBisiesto(1800);
+    expect(resultado).toEqual(false);
+  });
+
 });
 
 
