@@ -1,17 +1,18 @@
-import fizzbuzz from "./fizzbuzz"
+import esBisiesto from "./Bisiesto"
 
-const first = document.querySelector("#primer-numero");
-const form = document.querySelector("#fb-form");
+const anio = document.querySelector("#anio-bisiesto");
+const form = document.querySelector("#bs-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  const firstNumber = Number.parseInt(first.value);
-  let contador = 1;
-  while (contador <= firstNumber)
+  const anioUs = Number.parseInt(anio.value);
+  if(esBisiesto(anioUs) == true)
   {
-    div.innerHTML += "<p>"+ fizzbuzz(contador) +"</p>";
-    console.log(contador)
-    contador++;
-  } 
+    div.innerHTML += "<p>El año ingresado "+ anio +" es un año bisiesto</p>";
+  }
+  else
+  {
+    div.innerHTML += "<p>El año ingresado "+ anio +" no es un año bisiesto</p>";
+  }
 });
