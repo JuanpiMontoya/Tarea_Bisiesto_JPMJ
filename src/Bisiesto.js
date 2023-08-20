@@ -7,6 +7,9 @@ function esBisiesto(anio) {
   {
     return false;
   }
-
+  else if (anio % 4 == 0 && anio % 100 != 0)
+  {
+    return true;
+  }
 }
 export default esBisiesto;
