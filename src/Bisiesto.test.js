@@ -21,6 +21,11 @@ describe("Bisiesto", () => {
     expect(resultado).toEqual(true);
   });
 
+  it("Toma en cuenta el año como NO bisiesto si no es multiplo de 4", () => {
+    const resultado = esBisiesto(2017);
+    expect(resultado).toEqual(false);
+  });
+
 });
 
 
